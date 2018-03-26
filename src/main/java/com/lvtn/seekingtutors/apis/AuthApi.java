@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.lvtn.seekingtutors.Constant.ConstantKeys;
 import com.lvtn.seekingtutors.services.UserService;
-import com.lvtn.seekingtutors.utility.EncrytedPasswordUtils;
-
 import javassist.NotFoundException;
 
 import org.json.JSONException;
