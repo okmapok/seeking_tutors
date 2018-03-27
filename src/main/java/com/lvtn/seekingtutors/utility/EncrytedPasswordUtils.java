@@ -14,4 +14,9 @@ public class EncrytedPasswordUtils {
 	{
 		return BCrypt.checkpw(password, hashPassword);
 	}
+	
+//	public static void main(String[] args) {
+//		String test = encrytePassword("123456");
+//		System.out.print(test);
+//	}
 }

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lvtn.seekingtutors.Constant.ConstantKeys;
-import com.lvtn.seekingtutors.services.UserService;
+import com.lvtn.seekingtutors.services.AuthService;
 import javassist.NotFoundException;
 
 import org.json.JSONException;
@@ -23,7 +23,7 @@ import org.json.JSONObject;
 @RequestMapping(value = "/api/login")
 public class AuthApi {
 	@Autowired
-	private UserService userService;
+	private AuthService authService;
 	
 	@Autowired
 	 private HttpSession httpSession;
@@ -32,7 +32,7 @@ public class AuthApi {
 	public ResponseEntity<String> login(@RequestBody Map<String, Object> body) throws NotFoundException, JSONException{
 		String email = body.get(ConstantKeys.EMAIL).toString();
 	    String password = body.get(ConstantKeys.PASS_WORD).toString();
-	    JSONObject response = userService.authenticate(email, password);
+	    JSONObject response = authService.authenticate(email, password);
 	    if(response != null && (int)response.get(ConstantKeys.RESPONSE_CODE) == 200) 
 	    {
 	    	httpSession.setAttribute(ConstantKeys.EMAIL, email);

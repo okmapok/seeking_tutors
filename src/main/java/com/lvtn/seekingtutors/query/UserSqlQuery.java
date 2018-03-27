@@ -7,6 +7,6 @@ public class UserSqlQuery {
 		super();
 	}
 	public static final String AUTHENTICATE_QUERY = " SELECT (u) FROM User u"
-			+ " WHERE u.email = :email AND u.bcrytPassword = :password";
+			+ " WHERE u.email = :email AND u.encrytedPassword = :password";
 
 }
