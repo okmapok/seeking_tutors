@@ -1,7 +1,10 @@
 package com.lvtn.seekingtutors.models;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,6 +13,7 @@ import javax.persistence.Table;
 public class User {
 
 	@Id
+	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id")
 	private int id;
 	
@@ -19,11 +23,32 @@ public class User {
 	@Column(name = "first_name")
 	private String firstName;
 	
+	@Column(name = "age")
+	private int age;
+	
 	@Column(name = "email")
 	private String email;
 	
-	@Column(name = "pword")
-	private String bcrytPassword;
+	@Column(name = "encryted_password")
+	private String encrytedPassword;
+	
+	@Column(name = "country")
+	private String country;
+	
+	@Column(name = "city")
+	private String city;
+	
+	@Column(name = "district")
+	private String district;
+	
+	@Column(name = "ward")
+	private String ward;
+	
+	@Column(name = "gender")
+	private String gender;
+	
+	@Column(name = "phone_number")
+	private String phone_number;
 
 	public User() {
 		super();
@@ -86,17 +111,115 @@ public class User {
 	}
 
 	/**
-	 * @return the bcrytPassword
+	 * @return the age
 	 */
-	public String getBcrytPassword() {
-		return bcrytPassword;
+	public int getAge() {
+		return age;
 	}
 
 	/**
-	 * @param bcrytPassword the bcrytPassword to set
+	 * @param age the age to set
 	 */
-	public void setBcrytPassword(String bcrytPassword) {
-		this.bcrytPassword = bcrytPassword;
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	/**
+	 * @return the encrytedPassword
+	 */
+	public String getEncrytedPassword() {
+		return encrytedPassword;
+	}
+
+	/**
+	 * @param encrytedPassword the encrytedPassword to set
+	 */
+	public void setEncrytedPassword(String encrytedPassword) {
+		this.encrytedPassword = encrytedPassword;
+	}
+
+	/**
+	 * @return the country
+	 */
+	public String getCountry() {
+		return country;
+	}
+
+	/**
+	 * @param country the country to set
+	 */
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	/**
+	 * @return the city
+	 */
+	public String getCity() {
+		return city;
+	}
+
+	/**
+	 * @param city the city to set
+	 */
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	/**
+	 * @return the district
+	 */
+	public String getDistrict() {
+		return district;
+	}
+
+	/**
+	 * @param district the district to set
+	 */
+	public void setDistrict(String district) {
+		this.district = district;
+	}
+
+	/**
+	 * @return the ward
+	 */
+	public String getWard() {
+		return ward;
+	}
+
+	/**
+	 * @param ward the ward to set
+	 */
+	public void setWard(String ward) {
+		this.ward = ward;
+	}
+
+	/**
+	 * @return the gender
+	 */
+	public String getGender() {
+		return gender;
+	}
+
+	/**
+	 * @param gender the gender to set
+	 */
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	/**
+	 * @return the phone_number
+	 */
+	public String getPhone_number() {
+		return phone_number;
+	}
+
+	/**
+	 * @param phone_number the phone_number to set
+	 */
+	public void setPhone_number(String phone_number) {
+		this.phone_number = phone_number;
 	}
 	
 }

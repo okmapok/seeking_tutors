@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.lvtn.seekingtutors.services.UserService;
 
 @RestController
-@RequestMapping(value = "/api/logintest")
+@RequestMapping(value = "/api/user")
 public class userApi {
 	
 	@Autowired
