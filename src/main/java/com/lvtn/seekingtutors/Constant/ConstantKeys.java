@@ -16,5 +16,5 @@ public class ConstantKeys {
 	public static final String ERROR = "error";
 	public static final String STATUS = "status";
 	public static final String OK = "OK";
-	public static final String ROLES = "ROLES";
+	public static final String ROLES = "roles";
 }
